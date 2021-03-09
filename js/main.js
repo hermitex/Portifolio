@@ -21,8 +21,19 @@ menuLinks.forEach((link) => {
   });
 });
 
+menuLinks.forEach((link) => {
+  link.addEventListener('hover', (e) => {
+    console.log('ýes');
+    if (e.target.classList.contains('active')) {
+      return;
+    } else {
+      makeLinkActive(e.target);
+    }
+  });
+});
+
 setInterval(() => {
   welcomeMessage.forEach((message) => {
     message.classList.add('show');
   });
-}, 5000);
+}, 3000);

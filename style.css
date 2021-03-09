@@ -44,14 +44,16 @@ a {
   align-items: center;
   text-align: center;
   background-color: rgba(15, 11, 11, 0.822);
-  text-shadow: 0.2rem 0.2rem black;
 }
 
 #projects {
   height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-areas: 'project-1 project-2';
+  background-color: rgb(56, 35, 35);
+  grid-template-areas:
+    'project-1' 'project-2'
+    'project-3' 'project-4';
 }
 
 .project-1 {
@@ -60,12 +62,25 @@ a {
 .project-2 {
   grid-area: project-2;
 }
+.project-3 {
+  grid-area: project-3;
+}
+.project-4 {
+  grid-area: project-4;
+}
 
 .project {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
+#projects section {
+  width: 100%;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
 .project img {
   width: 100%;
   margin: auto;
@@ -78,16 +93,45 @@ a {
 }
 
 .welcome-message {
+  transition: 1s all ease-in;
+  text-shadow: 0.2rem 0.2rem black;
   display: none;
+  visibility: hidden;
 }
 
 .show {
-  transition: all 7s step-end;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
   display: block;
+  visibility: visible;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.show {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 
 .bounceIn {
-  transition: 5s all ease-in-out;
   font-size: 3rem;
   animation: blinkingIcon 7.5s infinite;
 }
@@ -106,5 +150,29 @@ a {
   }
   100% {
     color: #fff;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  #projects {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      'project-1 project-2'
+      'project-3 project-4';
+  }
+
+  .project-1 {
+    grid-area: project-1;
+  }
+  .project-2 {
+    grid-area: project-2;
+  }
+  .project-3 {
+    grid-area: project-3;
+  }
+  .project-4 {
+    grid-area: project-4;
   }
 }
