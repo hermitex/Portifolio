@@ -2,7 +2,7 @@ const menuLinks = Array.from(document.querySelectorAll('.menu-link'));
 
 const makeLinkActive = (link) => {
   menuLinks.forEach((menuLink) => menuLink.classList.remove('active'));
-  link.classList.add('active');
+  return link.classList.add('active');
 };
 
 menuLinks.forEach((link) => {
