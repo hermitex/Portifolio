@@ -47,13 +47,19 @@ a {
 }
 
 #projects {
-  height: 100vh;
-  width: 100%;
+  width: 100vw;
+  margin: auto;
+  height: auto;
   display: grid;
-  background-color: rgb(56, 35, 35);
+  background-color: rgb(56, 37, 59);
   grid-template-areas:
+    'header' 'header'
     'project-1' 'project-2'
     'project-3' 'project-4';
+  column-gap: 10px !important;
+  row-gap: 10px !important;
+  gap: 10px !important;
+  grid-column: auto;
 }
 
 .project-1 {
@@ -68,22 +74,22 @@ a {
 .project-4 {
   grid-area: project-4;
 }
+#header {
+  grid-area: header;
+}
 
 .project {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-#projects section {
-  width: 100%;
-  display: block;
-  margin: auto;
+  border: 0.1rem solid rgb(90, 2, 2);
+  margin: 1rem auto;
+
+  /* padding: 15rem; */
   text-align: center;
+  width: 70%;
 }
 
 .project img {
+  border: 0.1rem solid rgb(90, 2, 2);
   width: 100%;
-  margin: auto;
 }
 
 .active {
@@ -157,10 +163,12 @@ i {
 
 @media screen and (min-width: 960px) {
   #projects {
-    height: 100vh;
+    height: auto;
     width: 100%;
+    margin: auto;
     display: grid;
     grid-template-areas:
+      'header header'
       'project-1 project-2'
       'project-3 project-4';
   }
@@ -176,5 +184,14 @@ i {
   }
   .project-4 {
     grid-area: project-4;
+  }
+  #header {
+    grid-area: header;
+  }
+  .project {
+    margin: 1rem auto;
+    column-gap: 0;
+    row-gap: 0;
+    gap: 0;
   }
 }
