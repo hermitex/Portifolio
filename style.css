@@ -98,7 +98,9 @@ a {
   display: none;
   visibility: hidden;
 }
-
+i {
+  text-shadow: 0.2rem 0.2rem black;
+}
 .show {
   -webkit-animation-duration: 7s;
   animation-duration: 7s;
