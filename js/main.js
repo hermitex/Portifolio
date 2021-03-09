@@ -46,7 +46,7 @@ setTimeout(() => {
   welcomeMessage.forEach((message) => {
     message.classList.add('show');
   });
-}, 950);
+}, 1000);
 if (
   document.readyState === 'complete' ||
   document.readyState === 'interactive'
