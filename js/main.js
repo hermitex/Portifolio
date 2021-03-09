@@ -1,6 +1,7 @@
 import AutoTyping from '../dist/autoTyping.js';
 
 const typing = new AutoTyping('#autotype', [
+  '...',
   'I am a Web Developer...',
   'I can write mordern HTML...',
   'I can write mordern CSS...',
@@ -41,10 +42,14 @@ menuLinks.forEach((link) => {
   });
 });
 
-setInterval(() => {
+setTimeout(() => {
   welcomeMessage.forEach((message) => {
     message.classList.add('show');
   });
-}, 3000);
-
-typing.start();
+}, 950);
+if (
+  document.readyState === 'complete' ||
+  document.readyState === 'interactive'
+) {
+  typing.start();
+}

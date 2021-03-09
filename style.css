@@ -100,8 +100,8 @@ a {
 }
 
 .show {
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   display: block;
