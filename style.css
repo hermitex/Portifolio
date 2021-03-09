@@ -76,3 +76,36 @@ a {
   font-size: 1.2rem;
   border-bottom: 0.15rem solid aquamarine;
 }
+
+.welcome-message {
+  transition: all 0.9s ease-in;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.bounceIn {
+  animation-name: bounceIn;
+  -webkit-animation-name: bounceIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier(0.5, 0.09, 1, 0);
+  animation-timing-function: cubic-bezier(0.5, 0.09, 1, 0.5);
+  -webkit-animation-iteration-count: initial;
+  animation-iteration-count: initial;
+}
+
+@keyframes bounceIn {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 100px, 0);
+    transform: translate3d(0, 100px, 0);
+  }
+}

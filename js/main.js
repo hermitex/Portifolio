@@ -1,4 +1,7 @@
 const menuLinks = Array.from(document.querySelectorAll('.menu-link'));
+const welcomeMessage = Array.from(
+  document.querySelectorAll('.welcome-message')
+);
 
 const makeLinkActive = (link) => {
   return menuLinks.filter((menuLink) =>
@@ -17,3 +20,9 @@ menuLinks.forEach((link) => {
     }
   });
 });
+
+setInterval(() => {
+  welcomeMessage.forEach((message) => {
+    message.classList.add('show');
+  });
+}, 1500);
