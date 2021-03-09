@@ -1,0 +1,63 @@
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  margin: auto;
+  overflow-x: hidden;
+}
+nav {
+  margin: 0;
+  background-color: brown;
+  padding: 0.5rem;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+}
+
+#projects {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-areas: 'project-1 project-2';
+}
+
+.project-1 {
+  grid-area: project-1;
+}
+.project-2 {
+  grid-area: project-2;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.project img {
+  width: 100%;
+  margin: auto;
+}
