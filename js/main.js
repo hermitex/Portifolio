@@ -1,10 +1,10 @@
 import AutoTyping from '../dist/autoTyping.js';
 
 const typing = new AutoTyping('#autotype', [
-  'I am a Web Developer',
-  'I can write mordern HTML',
-  'I can write mordern CSS',
-  'I can write mordern JavaScript',
+  'I am a Web Developer...',
+  'I can write mordern HTML...',
+  'I can write mordern CSS...',
+  'I can write mordern JavaScript.',
 ]);
 
 const menuLinks = Array.from(document.querySelectorAll('.menu-link'));
