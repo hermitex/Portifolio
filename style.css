@@ -10,12 +10,13 @@ body {
 }
 nav {
   position: fixed;
+
   box-shadow: 0 0 0.5rem 0 black;
   top: 0;
   margin: 0;
   padding: 0.5rem;
   width: 100%;
-  background-color: brown;
+  background-color: rgb(90, 2, 2);
 }
 
 nav ul {
@@ -29,18 +30,20 @@ ul li {
 }
 
 a {
+  letter-spacing: 0.1rem;
   text-decoration: none;
-  color: black;
+  color: rgb(186, 192, 197);
 }
 
 #welcome-section {
   height: 100vh;
   display: flex;
+  color: #fff;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: blueviolet;
+  background-color: rgba(15, 11, 11, 0.822);
 }
 
 #projects {
@@ -69,5 +72,6 @@ a {
 
 .active {
   color: aliceblue;
-  border-bottom: 0.1rem solid aquamarine;
+  font-size: 1.2rem;
+  border-bottom: 0.15rem solid aquamarine;
 }
