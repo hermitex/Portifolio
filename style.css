@@ -78,34 +78,33 @@ a {
 }
 
 .welcome-message {
-  transition: all 0.9s ease-in;
   display: none;
 }
 
 .show {
+  transition: all 7s step-end;
   display: block;
 }
 
 .bounceIn {
-  animation-name: bounceIn;
-  -webkit-animation-name: bounceIn;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
-  -webkit-animation-timing-function: cubic-bezier(0.5, 0.09, 1, 0);
-  animation-timing-function: cubic-bezier(0.5, 0.09, 1, 0.5);
-  -webkit-animation-iteration-count: initial;
-  animation-iteration-count: initial;
+  transition: 5s all ease-in-out;
+  font-size: 3rem;
+  animation: blinkingIcon 7.5s infinite;
 }
-
-@keyframes bounceIn {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+@keyframes blinkingIcon {
+  0% {
+    color: #fff;
   }
-  to {
-    -webkit-transform: translate3d(0, 100px, 0);
-    transform: translate3d(0, 100px, 0);
+  49% {
+    color: rgb(90, 2, 2);
+  }
+  60% {
+    color: aquamarine;
+  }
+  99% {
+    color: rgb(90, 2, 2);
+  }
+  100% {
+    color: #fff;
   }
 }

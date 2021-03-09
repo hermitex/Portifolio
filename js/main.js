@@ -25,4 +25,4 @@ setInterval(() => {
   welcomeMessage.forEach((message) => {
     message.classList.add('show');
   });
-}, 1500);
+}, 5000);
