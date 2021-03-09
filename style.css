@@ -133,7 +133,7 @@ a {
 
 .bounceIn {
   font-size: 3rem;
-  animation: blinkingIcon 7.5s infinite;
+  animation: blinkingIcon 20s infinite;
 }
 @keyframes blinkingIcon {
   0% {
