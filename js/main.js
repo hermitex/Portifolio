@@ -1,7 +1,7 @@
 import AutoTyping from '../dist/autoTyping.js';
 
 const typing = new AutoTyping('#autotype', [
-  '...',
+  '.',
   'I am a Web Developer...',
   'I can write mordern HTML...',
   'I can write mordern CSS...',
